@@ -27,7 +27,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="flex justify-center items-center py-6 px-6 sm:py-10">
+          <section className="flex justify-center items-center py-6  sm:py-10">
             <Image
               src="/1.png"
               width={1280}
