@@ -12,15 +12,16 @@ export default function Home() {
       <main className="font-urbanist mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <section className="flex flex-col sm:flex-row justify-between py-8 sm:py-12">
             <div className="text-start sm:text-left mb-8 sm:mb-0 sm:w-1/2">
-              <div className=" text-4xl sm:text-6xl font-normal leading-tight">
+              <div className=" text-[56px] sm:text-[64px] font-normal leading-tight">
                 <p>Innovate.</p>
                 <p>Create.</p>
                 <p>Elevate.</p>
               </div>
             </div>
-            <div className="text-left self-center sm:text-left sm:w-[30%]">
-              <div className=" text-lg sm:text-xl font-normal leading-relaxed mb-4">
-                <p >From Cool Ideas to Awesome Apps– <br />Level Up with Us!</p>
+            <div className="text-left sm:self-center sm:text-left sm:w-[32%]">
+              <div className=" text-[16px] sm:text-[24px] font-normal leading-relaxed mb-4">
+                <p >From Cool Ideas to Awesome Apps- <br /> 
+                  Level Up with Us!</p>
               </div>
               <Button className="mt-2">Know more <MdArrowForward /></Button>
             </div>
