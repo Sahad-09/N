@@ -1,113 +1,150 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import Image from 'next/image';
+import { MdArrowForward } from "react-icons/md";
+import { MdArrowOutward } from "react-icons/md";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
+    <>
+      <main className="font-urbanist mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+          <section className="flex flex-col sm:flex-row justify-between py-8 sm:py-12">
+            <div className="text-start sm:text-left mb-8 sm:mb-0 sm:w-1/2">
+              <div className=" text-4xl sm:text-6xl font-normal leading-tight">
+                <p>Innovate.</p>
+                <p>Create.</p>
+                <p>Elevate.</p>
+              </div>
+            </div>
+            <div className="text-left self-center sm:text-left sm:w-[30%]">
+              <div className=" text-lg sm:text-xl font-normal leading-relaxed mb-4">
+                <p >From Cool Ideas to Awesome Apps– <br />Level Up with Us!</p>
+              </div>
+              <Button className="mt-2">Know more <MdArrowForward /></Button>
+            </div>
+          </section>
+
+          <section className="flex justify-center items-center py-6 px-6 sm:py-10">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src="/1.png"
+              width={1280}
+              height={400}
+              alt="Picture of the author"
+              className="rounded-lg"
             />
-          </a>
+          </section>
+
+
+
+
+
+          <section className='mt-[80px]'>
+            <h1 className='text-[32px] md:text-[48px] lg:text-[56px] font-normal leading-[40px] md:leading-[56px] lg:leading-[67.2px] text-left'>
+              Products
+            </h1>
+            <p className='text-[14px] md:text-[16px] font-normal mt-[8px] leading-[20px] md:leading-[28.8px] text-left'>
+              Discover Fun and Rewarding Apps – <br className='md:hidden' />Elevate Your Experience!
+            </p>
+          </section>
+          
+
+
+
+
+          <section className='flex flex-col md:flex-row mt-10'>
+            <div className='md:w-1/2'>
+              <Image
+                src="/4.png"
+                width={640}
+                height={640}
+                alt="Picture of the author"
+                className="rounded-lg w-full h-auto"
+              />
+            </div>
+            <div className='md:w-1/2 md:pl-10'>
+              <h1 className='text-[20px] md:text-[24px] mt-[24px] font-semibold leading-[32px] md:leading-[36px] lg:leading-[40px] text-left'>
+                CashTriv
+              </h1>
+              <p className='text-[14px] md:text-[16px] font-normal leading-[20px] md:leading-[28.8px] mt-4 text-left'>
+                Lorem ipsum dolor sit amet consectetur. Arcu vitae viverra amet auctor libero. Suspendisse purus platea donec risus tincidunt varius ut egestas aliquam. Pharetra gravida sollicitudin proin tristique et odio. Eu cum diam vestibulum lectus condimentum.
+              </p>
+              <Button className='mt-[24px]'>Get the app <MdArrowOutward /></Button>
+            </div>
+          </section>
+          
+          
+
+          
+          <section className='flex flex-col md:flex-row mt-10'>
+            <div className='md:w-1/2'>
+              <Image
+                src="/4.png"
+                width={640}
+                height={640}
+                alt="Picture of the author"
+                className="rounded-lg w-full h-auto"
+              />
+            </div>
+          
+            <div className='md:w-1/2 md:pl-10'>
+              <h1 className='text-[20px] md:text-[24px] mt-[24px] font-semibold leading-[32px] md:leading-[36px] lg:leading-[40px] text-left'>
+              Hand Cricket
+              </h1>
+              <p className='text-[14px] md:text-[16px] font-normal leading-[20px] md:leading-[28.8px] mt-4 text-left'>
+                Lorem ipsum dolor sit amet consectetur. Arcu vitae viverra amet auctor libero. Suspendisse purus platea donec risus tincidunt varius ut egestas aliquam. Pharetra gravida sollicitudin proin tristique et odio. Eu cum diam vestibulum lectus condimentum.
+              </p>
+              <Button className='mt-[24px]'>Coming Soon</Button>
+            </div>
+          </section>
+
+
+<div className="max-w-md mt-10 p-6">
+      <h1 className="text-2xl font-semibold mb-6">Connect with us</h1>
+      <form>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <Label className="block text-sm font-medium ">First name</Label>
+            <Input
+              type="text"
+              className="mt-1 block w-full"
+            />
+          </div>
+          <div>
+            <Label className="block text-sm font-medium ">Last name</Label>
+            <Input
+              type="text"
+              className="mt-1 block w-full"
+            />
+          </div>
         </div>
-      </div>
+        <div className="mt-4">
+          <Label className="block text-sm font-medium ">Email address</Label>
+          <Input
+            type="email"
+            className="mt-1 block w-full"
+          />
+        </div>
+        <div className="mt-4">
+          <Label className="block text-sm font-medium ">Your message</Label>
+          <Textarea
+            className="mt-1 block w-full"
+          ></Textarea>
+        </div>
+        <div className="mt-4">
+          <Button
+            type="submit"
+            className="bg-black text-white px-4 py-2"
+          >
+            Submit
+          </Button>
+        </div>
+      </form>
+    </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      </main>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </>
   );
 }
